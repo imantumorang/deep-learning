@@ -1,7 +1,7 @@
 [project]
 name = "deep-learning"
 version = "0.1.0"
-description = "Add your description here"
+description = "Iman Tumorang's Deep Learning Artifacts"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [

@@ -1,5 +1,5 @@
 def main():
-    print("Hello from deep-learning!")
+    print("Hello from Iman Tumorang's Deep Learning Artifacts!")
 
 
 if __name__ == "__main__":
