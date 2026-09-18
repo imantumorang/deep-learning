@@ -27,31 +27,25 @@ More posts coming as I work through the milestones.
 |---|---|---|
 | Logistic regression | Cat vs dog binary classifier, single neuron, trained with plain gradient descent | [`milestones/logistic-regression/catvdog.ipynb`](milestones/logistic-regression/catvdog.ipynb) |
 
-### Logistic regression, in numbers
+## Getting started
 
-8,005 training images and 2,023 test images, each resized to 64x64 RGB and flattened
-into a 12,288-dimensional column vector. One neuron, sigmoid activation, binary
-cross-entropy loss. 5,000 iterations at a learning rate of 0.001 gets to **63.6% train
-accuracy and 61.1% test accuracy**.
-
-That's barely better than a coin flip, and that's the point. A single linear boundary
-over raw pixels can't separate cats from dogs. The next milestone is where the hidden
-layers come in.
-
-## Setup
-
-Uses [uv](https://docs.astral.sh/uv/) and Python 3.14.
+You need [uv](https://docs.astral.sh/uv/). It pulls the Python 3.14 toolchain and the
+dependencies for you, so it's the only thing to install yourself.
 
 ```bash
+git clone git@github.com:imantumorang/deep-learning.git
+cd deep-learning
 uv sync
-uv run jupyter lab
 ```
 
-## Getting the dataset
+### 1. Download the dataset
 
-`dataset/` is gitignored, so you need to fetch the images yourself. Grab the
+`dataset/` is gitignored, so the images don't come with the clone. Grab the
 [Cat and Dog dataset](https://www.kaggle.com/datasets/tongpython/cat-and-dog) from
-Kaggle and unpack it so the tree looks like this:
+Kaggle. That same link sits in a comment in the notebook's first cell, in case you find
+this repo before you find this README.
+
+Unzip it under `dataset/catvdog/` so the paths match what the notebook expects:
 
 ```
 dataset/catvdog/
@@ -63,8 +57,27 @@ dataset/catvdog/
     └── dogs/
 ```
 
-The handful of images in `test-dataset/images/` are committed. Those are for poking at
-the trained model with pictures it has never seen.
+Check the nesting after unzipping, since Kaggle archives often wrap everything in an
+extra folder. The notebook walks these directories recursively and reads the class label
+off the parent folder name, so `cats/` and `dogs/` have to be the direct parents of the
+image files.
+
+### 2. Run the notebook
+
+```bash
+uv run jupyter lab
+```
+
+Open [`milestones/logistic-regression/catvdog.ipynb`](milestones/logistic-regression/catvdog.ipynb)
+and run the cells top to bottom. The first cell scans the dataset and prints a summary,
+which doubles as a check that you got the folder layout right. The training cell runs
+5,000 full-batch iterations over every image, so that's the slow one.
+
+### 3. Point it at your own photos
+
+The last cells classify a single file from `test-dataset/images/`, which is committed,
+so there's something to run against immediately. Drop your own cat or dog picture in
+that folder and change `my_image` to its filename.
 
 ## License
 
