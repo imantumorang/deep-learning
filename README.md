@@ -1,8 +1,10 @@
 # deep-learning
 
-My public notebook for learning deep learning from the ground up. Every milestone here
-is built with NumPy only: no PyTorch, no TensorFlow, no autograd. If the math shows up
-in a writeup, it also shows up as code in this repo, and vice versa.
+My public notebook for learning deep learning from the ground up. Everything so far is
+plain NumPy, because I'm early enough in this that I'd rather write the gradients myself
+than have a framework hand them to me. PyTorch and friends come later, once the math
+stops being the hard part. If something shows up in a writeup, it shows up as code in
+this repo, and vice versa.
 
 ## The writeups
 
