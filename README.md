@@ -15,7 +15,7 @@ the repo holds the implementation.
 
    Working the forward and backward pass by hand, on paper, before writing any code.
 
-2. **[Deep Learning Series: Building Magic Box with Logistic Regression](https://medium.easyread.co/814b880835d3)** *(scheduled for 19 Sep 2026)*
+2. **[Deep Learning Series: Building Magic Box with Logistic Regression](https://medium.easyread.co/deep-learning-series-building-magic-box-with-logistic-regression-814b880835d3?sharedUserId=imantumorang)**
 
    Notes from building the cat-vs-dog classifier in `milestones/logistic-regression`.
 
