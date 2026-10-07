@@ -19,6 +19,12 @@ the repo holds the implementation.
 
    Notes from building the cat-vs-dog classifier in `milestones/logistic-regression`.
 
+3. **[Deep Learning Series: Magic Box is Moving the Deep Neural Network!](https://medium.easyread.co/deep-learning-series-magic-box-is-moving-the-deep-neural-network-3b736543bf89)**
+
+   The building blocks for an arbitrary number of layers: parameter initialization and
+   its shapes, the activation functions, forward pass, cost, backprop, gradient descent.
+   Then the three way comparison below. Covers `milestones/deep-neural-network`.
+
 More posts coming as I work through the milestones.
 
 ## Milestones
@@ -26,6 +32,7 @@ More posts coming as I work through the milestones.
 | Milestone | What it does | Where |
 |---|---|---|
 | Logistic regression | Cat vs dog binary classifier, single neuron, trained with plain gradient descent | [`milestones/logistic-regression/catvdog.ipynb`](milestones/logistic-regression/catvdog.ipynb) |
+| Deep neural network | Same problem with hidden layers. Forward pass, backprop and parameter updates for any layer count, then no hidden layer vs one vs three compared side by side | [`milestones/deep-neural-network/`](milestones/deep-neural-network/) |
 
 ## Getting started
 
@@ -62,22 +69,33 @@ extra folder. The notebook walks these directories recursively and reads the cla
 off the parent folder name, so `cats/` and `dogs/` have to be the direct parents of the
 image files.
 
-### 2. Run the notebook
+### 2. Run the notebooks
 
 ```bash
 uv run jupyter lab
 ```
 
-Open [`milestones/logistic-regression/catvdog.ipynb`](milestones/logistic-regression/catvdog.ipynb)
-and run the cells top to bottom. The first cell scans the dataset and prints a summary,
-which doubles as a check that you got the folder layout right. The training cell runs
-5,000 full-batch iterations over every image, so that's the slow one.
+Both milestones live at `milestones/<name>/catvdog.ipynb`. Start with
+[`logistic-regression`](milestones/logistic-regression/catvdog.ipynb) if you want them in
+order. The first cell of either one scans the dataset and prints a summary, which doubles
+as a check that you got the folder layout right.
+
+The training cells are the slow ones, and slower than you'd guess. Everything is full
+batch, so one iteration multiplies through all 8,005 training images at once, and the
+flattened training set is a 12,288 x 8,005 array of float64. The deep notebook trains
+three of those models back to back. Drop `iteration` while you're poking at things.
+
+Run the cells top to bottom rather than clicking around. Editing a cell changes the file
+but not the kernel, so a stale definition left in memory will throw errors that point at
+code you already fixed.
 
 ### 3. Point it at your own photos
 
-The last cells classify a single file from `test-dataset/images/`, which is committed,
-so there's something to run against immediately. Drop your own cat or dog picture in
-that folder and change `my_image` to its filename.
+The last cells classify a single file from `test-dataset/images/`. Those five pictures
+are committed, so there's something to run against as soon as training finishes. Drop
+your own cat or dog in that folder and change `my_image` to its filename. The deep
+notebook sends the image through all three trained models at once, which is a faster way
+to compare them than staring at accuracy numbers.
 
 ## License
 
