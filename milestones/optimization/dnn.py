@@ -49,6 +49,7 @@ def propagate(W, Aprev, b):
 class ForwardCache (NamedTuple):
     PropagateCache: PropagateCache
     ActivationCache: ActivationCache
+    DropoutCache: np.ndarray = None
 
 
 def AL_derivative(AL,Y):
