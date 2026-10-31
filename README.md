@@ -6,6 +6,8 @@ than have a framework hand them to me. PyTorch and friends come later, once the 
 stops being the hard part. If something shows up in a writeup, it shows up as code in
 this repo, and vice versa.
 
+I track the whole learning progress at [ai.imantumorang.com](https://ai.imantumorang.com/).
+
 ## The writeups
 
 I'm publishing a series on Medium alongside the code. Each post explains the theory,
@@ -25,6 +27,20 @@ the repo holds the implementation.
    its shapes, the activation functions, forward pass, cost, backprop, gradient descent.
    Then the three way comparison below. Covers `milestones/deep-neural-network`.
 
+4. **[Deep Learning Series: Speeding up the Learning of the Magic Box](https://medium.easyread.co/deep-learning-series-speeding-up-the-learning-of-the-magic-box-43ec5e13d6c3)**
+
+   Mini-batch gradient descent: shuffle, split into batches, update after every batch.
+
+5. **[Deep Learning Series: Optimization Algorithm, Reducing the Noise](https://medium.easyread.co/deep-learning-series-optimization-algorithm-reducing-the-noise-82082ed3b670)**
+
+   Momentum, RMSprop and Adam to smooth out the noisy mini-batch updates.
+
+6. **[Deep Learning Series: Bring Them Back to Normal with Regularization](https://medium.easyread.co/deep-learning-series-bring-them-back-to-normal-with-regularization-b5dc6db465ad)**
+
+   L2, L1 and dropout to fight the overfitting.
+
+   Posts 4 to 6 cover `milestones/optimization`, one notebook per post.
+
 More posts coming as I work through the milestones.
 
 ## Milestones
@@ -33,6 +49,7 @@ More posts coming as I work through the milestones.
 |---|---|---|
 | Logistic regression | Cat vs dog binary classifier, single neuron, trained with plain gradient descent | [`milestones/logistic-regression/catvdog.ipynb`](milestones/logistic-regression/catvdog.ipynb) |
 | Deep neural network | Same problem with hidden layers. Forward pass, backprop and parameter updates for any layer count, then no hidden layer vs one vs three compared side by side | [`milestones/deep-neural-network/`](milestones/deep-neural-network/) |
+| Optimization | The deep network trained faster with mini-batches, momentum, RMSprop and Adam, then regularized with L2, L1 and dropout | [`milestones/optimization/`](milestones/optimization/) |
 
 ## Getting started
 
@@ -75,9 +92,10 @@ image files.
 uv run jupyter lab
 ```
 
-Both milestones live at `milestones/<name>/catvdog.ipynb`. Start with
+The first two milestones live at `milestones/<name>/catvdog.ipynb`, the optimization
+one has a notebook per post (see [its README](milestones/optimization/README.md)). Start with
 [`logistic-regression`](milestones/logistic-regression/catvdog.ipynb) if you want them in
-order. The first cell of either one scans the dataset and prints a summary, which doubles
+order. The first cell of each one scans the dataset and prints a summary, which doubles
 as a check that you got the folder layout right.
 
 The training cells are the slow ones, and slower than you'd guess. Everything is full
