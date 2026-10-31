@@ -27,11 +27,17 @@ the repo holds the implementation.
    its shapes, the activation functions, forward pass, cost, backprop, gradient descent.
    Then the three way comparison below. Covers `milestones/deep-neural-network`.
 
-4. **Mini-batch gradient descent** (link coming)
+4. **[Deep Learning Series: Speeding up the Learning of the Magic Box](https://medium.easyread.co/deep-learning-series-speeding-up-the-learning-of-the-magic-box-43ec5e13d6c3)**
 
-5. **Momentum, RMSprop and Adam** (link coming)
+   Mini-batch gradient descent: shuffle, split into batches, update after every batch.
 
-6. **L2, L1 and dropout regularization** (link coming)
+5. **[Deep Learning Series: Optimization Algorithm, Reducing the Noise](https://medium.easyread.co/deep-learning-series-optimization-algorithm-reducing-the-noise-82082ed3b670)**
+
+   Momentum, RMSprop and Adam to smooth out the noisy mini-batch updates.
+
+6. **[Deep Learning Series: Bring Them Back to Normal with Regularization](https://medium.easyread.co/deep-learning-series-bring-them-back-to-normal-with-regularization-b5dc6db465ad)**
+
+   L2, L1 and dropout to fight the overfitting.
 
    Posts 4 to 6 cover `milestones/optimization`, one notebook per post.
 

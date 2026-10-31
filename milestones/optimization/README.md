@@ -7,9 +7,9 @@ notebook to the next.
 
 | Notebook | Post | What's in it |
 |---|---|---|
-| [`01_mini_batch.ipynb`](01_mini_batch.ipynb) | Part 1 (link coming) | Full batch baseline, then mini-batch gradient descent: shuffle, split into batches of 128, update after every batch |
-| [`02_optimizers.ipynb`](02_optimizers.ipynb) | Part 2 (link coming) | Momentum, RMSprop and Adam on top of mini-batch, and the learning rate each one needs |
-| [`03_regularization.ipynb`](03_regularization.ipynb) | Part 3 (link coming) | L2, L1 and dropout to close the gap between train and test accuracy, with the lambda and keep_prob sweeps |
+| [`01_mini_batch.ipynb`](01_mini_batch.ipynb) | [Speeding up the Learning of the Magic Box](https://medium.easyread.co/deep-learning-series-speeding-up-the-learning-of-the-magic-box-43ec5e13d6c3) | Full batch baseline, then mini-batch gradient descent: shuffle, split into batches of 128, update after every batch |
+| [`02_optimizers.ipynb`](02_optimizers.ipynb) | [Optimization Algorithm, Reducing the Noise](https://medium.easyread.co/deep-learning-series-optimization-algorithm-reducing-the-noise-82082ed3b670) | Momentum, RMSprop and Adam on top of mini-batch, and the learning rate each one needs |
+| [`03_regularization.ipynb`](03_regularization.ipynb) | [Bring Them Back to Normal with Regularization](https://medium.easyread.co/deep-learning-series-bring-them-back-to-normal-with-regularization-b5dc6db465ad) | L2, L1 and dropout to close the gap between train and test accuracy, with the lambda and keep_prob sweeps |
 | [`minibatches_refactored.ipynb`](minibatches_refactored.ipynb) | | The final model from part 3, cleaned up. Dropout lives inside the normal forward and backward pass, L1/L2 are add-ons to the cost and gradients. Trains exactly like the part 3 model |
 
 `dnn.py` has the building blocks from the previous milestone (layers, activations,
